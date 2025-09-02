@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "So Doodle",
+    "dogs": "Our Dogs",
+    "breed": "The Breed",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "wantPuppy": "I want a puppy"
+  },
+  "hero": {
+    "title": "Australian Labradoodles in Chile",
+    "subtitle": "Ethical breeding, early socialization and comprehensive support to integrate a balanced Doodle into your family.",
+    "buttons": {
+      "seeLitters": "See litters",
+      "knowBreed": "Know the breed"
+    }
+  }
+}
