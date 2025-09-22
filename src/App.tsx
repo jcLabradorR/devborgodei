@@ -45,52 +45,52 @@ const LanguageSelector: React.FC = () => {
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=800",
+    src: "/images/foto1.jpg",
     alt: "Australian Labradoodle jugando en el jardín"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=800",
+    src: "/images/foto2.jpg",
     alt: "Cachorro Labradoodle chocolate"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800",
+    src: "/images/foto3.jpg",
     alt: "Labradoodle adulto color crema"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800",
+    src: "/images/foto9.jpg",
     alt: "Familia de Labradoodles"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800",
+    src: "/images/foto5.jpg",
     alt: "Labradoodle corriendo en la playa"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=800",
+    src: "/images/foto6.jpg",
     alt: "Cachorro Labradoodle durmiendo"
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=800",
+    src: "/images/foto9.jpg",
     alt: "Labradoodle en sesión de entrenamiento"
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=800",
+    src: "/images/foto12.jpg",
     alt: "Labradoodle con pelaje rizado"
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800",
+    src: "/images/foto12.jpg",
     alt: "Labradoodle en el parque"
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?q=80&w=800",
+    src: "/images/labradoodle-1.jpg",
     alt: "Cachorro Labradoodle explorando"
   },
   {
