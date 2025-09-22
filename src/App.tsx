@@ -10,47 +10,98 @@ import { useTranslation } from 'react-i18next';
 import './i18n/config';
 import { GB, IT } from 'country-flag-icons/react/3x2'
 
+
+
 // Añade este componente para el selector de idioma
 const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 items-center">
       <button
         onClick={() => i18n.changeLanguage('it')}
-        className={`px-2 py-1 rounded-xl border ${i18n.language === 'it' ? 'bg-accent' : 'bg-background'}`}
+        className={`px-2 py-1 rounded-xl border ${
+          i18n.language === 'it' ? 'bg-accent' : 'bg-background'
+        } hover:bg-accent/50 transition-colors`}
+        aria-label="Italiano"
       >
-        <IT className="w-4 h-4" />
+        <IT className="w-4 h-4 md:w-5 md:h-5" />
       </button>
       
       <button
         onClick={() => i18n.changeLanguage('en')}
-        className={`px-2 py-1 rounded-xl border ${i18n.language === 'en' ? 'bg-accent' : 'bg-background'}`}
+        className={`px-2 py-1 rounded-xl border ${
+          i18n.language === 'en' ? 'bg-accent' : 'bg-background'
+        } hover:bg-accent/50 transition-colors`}
+        aria-label="English"
       >
-        <GB className="w-4 h-4" />
+        <GB className="w-4 h-4 md:w-5 md:h-5" />
       </button>
     </div>
   );
 };
+//////////////////////////////////////////////////////
 
-const dogs = [
+const galleryImages = [
   {
-    name: "Luna",
-    size: "Medium",
-    color: "Caramelo",
-    img: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200",
+    id: 1,
+    src: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=800",
+    alt: "Australian Labradoodle jugando en el jardín"
   },
   {
-    name: "Milo",
-    size: "Mini",
-    color: "Chocolate",
-    img: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200",
+    id: 2,
+    src: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=800",
+    alt: "Cachorro Labradoodle chocolate"
   },
   {
-    name: "Nala",
-    size: "Standard",
-    color: "Crema",
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200",
+    id: 3,
+    src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800",
+    alt: "Labradoodle adulto color crema"
+  },
+  {
+    id: 4,
+    src: "https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800",
+    alt: "Familia de Labradoodles"
+  },
+  {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800",
+    alt: "Labradoodle corriendo en la playa"
+  },
+  {
+    id: 6,
+    src: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=800",
+    alt: "Cachorro Labradoodle durmiendo"
+  },
+  {
+    id: 7,
+    src: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=800",
+    alt: "Labradoodle en sesión de entrenamiento"
+  },
+  {
+    id: 8,
+    src: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=800",
+    alt: "Labradoodle con pelaje rizado"
+  },
+  {
+    id: 9,
+    src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800",
+    alt: "Labradoodle en el parque"
+  },
+  {
+    id: 10,
+    src: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?q=80&w=800",
+    alt: "Cachorro Labradoodle explorando"
+  },
+  {
+    id: 11,
+    src: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=800",
+    alt: "Labradoodle con juguete"
+  },
+  {
+    id: 12,
+    src: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=800",
+    alt: "Labradoodle posando para la cámara"
   },
 ];
 
@@ -94,8 +145,12 @@ const SectionTitle: React.FC<{ title: string; subtitle?: string; id?: string }> 
   </div>
 );
 
-const NavLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-  <a href={href} className="px-3 py-2 rounded-xl hover:bg-accent hover:text-accent-foreground transition-colors">
+const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick?: () => void }> = ({ href, children, onClick }) => (
+  <a
+    href={href}
+    onClick={onClick}
+    className="px-3 py-2 rounded-xl hover:bg-accent transition-colors"
+  >
     {children}
   </a>
 );
@@ -106,54 +161,71 @@ export default function SodoodleStyleSite() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-2 font-bold text-xl">
+<header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    {/* Logo */}
+<a href="#inicio" className="flex items-center gap-2">
   <img 
-    src="/images/logo.png" // Asegúrate de guardar la imagen en la carpeta public
-    alt="So Doodle Logo este"
-    className="h-20 w-20" // Ajusta el tamaño según necesites
+    src="/images/logo.png"
+    alt="So Doodle Logo"
+    className="h-16 w-16 md:h-20 md:w-20"
   />
-  <span>Borgo dei Doodle</span>
+  <span className="font-bold text-sm sm:text-base md:text-xl"> {/* Modificado aquí */}
+    Borgo dei Doodle
+  </span>
 </a>
-          <nav className="hidden md:flex items-center text-sm">
-            <NavLink href="#inicio">{t('nav.home')}</NavLink>
-            <NavLink href="#so-doodle">{t('nav.about')}</NavLink>
-            <NavLink href="#nuestros-perros">{t('nav.dogs')}</NavLink>
-            <NavLink href="#la-raza">{t('nav.breed')}</NavLink>
-            <NavLink href="#faq">{t('nav.faq')}</NavLink>
-            <NavLink href="#contacto">{t('nav.contact')}</NavLink>
-          </nav>
-          <div className="flex items-center gap-2">
-            <LanguageSelector /> {/* Añadir el selector aquí */}
-          </div>
-          <div className="flex items-center gap-2">
-            <Button asChild size="sm" className="rounded-2xl">
-              <a href="#contacto">{t('nav.wantPuppy')}</a>
-            </Button>
-          </div>
-        </div>
-      </header>
+
+    {/* Navegación desktop */}
+    <nav className="hidden md:flex items-center text-sm">
+      <NavLink href="#inicio">{t('nav.home')}</NavLink>
+      <NavLink href="#so-doodle">{t('nav.about')}</NavLink>
+      <NavLink href="#nuestros-perros">{t('nav.dogs')}</NavLink>
+      <NavLink href="#la-raza">{t('nav.breed')}</NavLink>
+      <NavLink href="#faq">{t('nav.faq')}</NavLink>
+      <NavLink href="#contacto">{t('nav.contact')}</NavLink>
+    </nav>
+
+    {/* Selector de idioma y botón */}
+    <div className="flex items-center gap-2 sm:gap-4">
+      <LanguageSelector />
+      <Button 
+        asChild 
+        size="sm" 
+        className="rounded-2xl hidden sm:flex"
+      >
+        <a href="#contacto">{t('nav.wantPuppy')}</a>
+      </Button>
+    </div>
+  </div>
+</header>
 
       {/* Hero */}
       <section id="inicio" className="relative overflow-hidden">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center px-4 py-20">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              {t('hero.title')}
-            </h1>
-            <p className="mt-4 text-lg text-muted-foreground">
-              {t('hero.subtitle')}
-            </p>
-            <div className="mt-6 flex gap-3">
-              <Button asChild className="rounded-2xl">
-                <a href="#nuestros-perros">Ver camadas</a>
-              </Button>
-              <Button variant="outline" asChild className="rounded-2xl">
-                <a href="#la-raza">Conocer la raza</a>
-              </Button>
-            </div>
-          </motion.div>
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 items-center px-4 py-20">
+    <motion.div 
+      initial={{ opacity: 0, y: 10 }} 
+      animate={{ opacity: 1, y: 0 }} 
+      transition={{ duration: 0.6 }}
+    >
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+        {t('hero.title')}
+      </h1>
+      <p className="mt-4 text-lg text-muted-foreground">
+        {t('hero.subtitle')}
+      </p>
+      <div className="mt-6 flex gap-3">
+        <Button asChild className="rounded-2xl">
+          <a href="#nuestros-perros">
+            {t('hero.buttons.seeLitters')}
+          </a>
+        </Button>
+        <Button variant="outline" asChild className="rounded-2xl">
+          <a href="#la-raza">
+            {t('hero.buttons.knowBreed')}
+          </a>
+        </Button>
+      </div>
+    </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
@@ -171,103 +243,116 @@ export default function SodoodleStyleSite() {
       </section>
 
       {/* So Doodle / Sobre mí */}
-      <section id="so-doodle" className="px-4 py-20 bg-muted/30">
-        <SectionTitle
-          title="Encontrando el sentido: cuando el amor se transforma en misión"
-          subtitle="Más de 10 años criando con ética, priorizando el bienestar emocional y físico de cada cachorro y su familia."
-        />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          <Card className="rounded-2xl shadow-sm">
-            <CardContent className="p-6 space-y-3">
-              <h3 className="text-xl font-semibold">Sobre mí</h3>
-              <p className="text-muted-foreground">
-                Soy criadora y facilitadora en intervenciones asistidas por animales. Selecciono familias con
-                compromiso y acompaño durante los primeros 65 días con educación, socialización y guía.
-              </p>
-              <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
-                <li>Cría en casa con estimulación neurológica temprana</li>
-                <li>Plan de vacunación al día y desparasitación</li>
-                <li>Kit de adopción completo y seguimiento</li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl shadow-sm">
-            <CardContent className="p-6 space-y-3">
-              <h3 className="text-xl font-semibold">Entrega del cachorro</h3>
-              <p className="text-muted-foreground">
-                Entregamos entre los 65/70 días con todo lo necesario para una integración suave. También
-                contamos con recomendaciones de educación, peluquería y veterinaria.
-              </p>
-              <div className="flex gap-3">
-                <Button asChild variant="outline" className="rounded-2xl"><a href="#contacto">Consultar disponibilidad</a></Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+<section id="so-doodle" className="px-4 py-20 bg-muted/30">
+  <SectionTitle
+    title={t('soDoodle.title')}
+    subtitle={t('soDoodle.subtitle')}
+  />
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+    <Card className="rounded-2xl shadow-sm">
+      <CardContent className="p-6 space-y-3">
+        <h3 className="text-xl font-semibold">{t('soDoodle.ourStory')}</h3>
+        <p className="text-muted-foreground">
+          {t('soDoodle.description')}
+        </p>
+      </CardContent>
+    </Card>
+    
+    <Card className="rounded-2xl shadow-sm">
+      <CardContent className="p-6 space-y-3">
+        <h3 className="text-xl font-semibold">{t('soDoodle.delivery.title')}</h3>
+        <p className="text-muted-foreground">
+          {t('soDoodle.delivery.description')}
+        </p>
+      </CardContent>
+    </Card>
+  </div>
+</section>
 
-      {/* Nuestros Perros */}
-      <section id="nuestros-perros" className="px-4 py-20">
-        <SectionTitle title="Nuestros Perros" subtitle="Ejemplos de tamaños y mantos" />
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {dogs.map((d) => (
-            <Card key={d.name} className="rounded-2xl hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <img src={d.img} alt={d.name} className="w-full h-56 object-cover rounded-t-2xl" />
-                <div className="p-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-lg">{d.name}</h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-muted">{d.size}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Color: {d.color}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* La Raza */}
-      <section id="la-raza" className="px-4 py-20 bg-muted/30">
-        <SectionTitle
-          title="La Raza: Australian Labradoodle"
-          subtitle="Perros de familia y de terapia: inteligencia, estabilidad emocional y convivencia amable."
-        />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
-          <div className="space-y-3">
-            <p className="text-muted-foreground">
-              Los Australian Labradoodles se caracterizan por su temperamento equilibrado, alta sociabilidad y
-              facilidad para el aprendizaje. Suelen presentar baja muda de pelo y son aptos para familias activas.
-            </p>
-            <ul className="grid sm:grid-cols-2 gap-2 text-sm">
-              <li className="p-3 rounded-xl bg-background border">Hipoalergénicos (en muchos casos)</li>
-              <li className="p-3 rounded-xl bg-background border">Altamente entrenables</li>
-              <li className="p-3 rounded-xl bg-background border">Ideales para terapia/acompañamiento</li>
-              <li className="p-3 rounded-xl bg-background border">Esperanza de vida 12–15 años</li>
-            </ul>
-          </div>
+<section id="nuestros-perros" className="px-4 py-20">
+  <SectionTitle 
+    title={t('dogs.title')} 
+    subtitle={t('dogs.subtitle')} 
+  />
+  
+  <div className="max-w-7xl mx-auto">
+    {/* Galería responsiva */}
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {galleryImages.map((image) => (
+        <motion.div
+          key={image.id}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: image.id * 0.1 }}
+          className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
+        >
           <img
-            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600"
-            alt="Labradoodle mirando a cámara"
-            className="w-full h-[320px] object-cover rounded-2xl shadow"
+            src={image.src}
+            alt={image.alt}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            loading="lazy"
           />
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
-      {/* FAQ */}
-      <section id="faq" className="px-4 py-20">
-        <SectionTitle title="Preguntas Frecuentes" subtitle="Todo lo esencial antes de adoptar" />
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">{f.a}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
+{/* La Raza */}
+<section id="la-raza" className="px-4 py-20 bg-muted/30">
+  <SectionTitle
+    title={t('breed.title')}
+    subtitle={t('breed.subtitle')}
+  />
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+    <div className="space-y-3">
+      <p className="text-muted-foreground">
+        {t('breed.description')}
+      </p>
+      <ul className="grid sm:grid-cols-2 gap-2 text-sm">
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.color')}
+        </li>
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.coat')}
+        </li>
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.size')}
+        </li>
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.lifespan')}
+        </li>
+      </ul>
+    </div>
+    <div className="relative h-[320px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden shadow-lg">
+      <img
+        src="/images/foto113.jpg"
+        alt="Labradoodle mirando a cámara"
+        className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+  </div>
+</section>
+
+   {/* FAQ */}
+<section id="faq" className="px-4 py-20">
+  <SectionTitle 
+    title={t('faq.title')} 
+    subtitle={t('faq.subtitle')} 
+  />
+  <div className="max-w-3xl mx-auto">
+    <Accordion type="single" collapsible className="w-full">
+      {(t('faq.questions', { returnObjects: true }) as { q: string; a: string }[]).map((faq, i) => (
+        <AccordionItem key={i} value={`item-${i}`}>
+          <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
+          <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  </div>
+</section>
 
       {/* Contacto */}
       <section id="contacto" className="px-4 py-20 bg-muted/30">
@@ -275,8 +360,8 @@ export default function SodoodleStyleSite() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
           <Card className="rounded-2xl">
             <CardContent className="p-6 space-y-4">
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hola@tudoodle.cl</span></div>
-              <div className="flex items-center gap-2"><Phone className="h-4 w-4" /><span>+56 9 1234 5678</span></div>
+              <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hola@borgodidoogle.com</span></div>
+              <div className="flex items-center gap-2"><Phone className="h-4 w-4" /><span>+34000000000</span></div>
               <div className="flex items-center gap-3 mt-2">
                 <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent"><Instagram className="h-4 w-4"/>Instagram</a>
                 <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent"><Facebook className="h-4 w-4"/>Facebook</a>

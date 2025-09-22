@@ -15,5 +15,31 @@
       "seeLitters": "See litters",
       "knowBreed": "Know the breed"
     }
+  },
+  "soDoodle": {
+    "title": "Lola brought us more than tenderness: she gave us passion for this breed.",
+    "subtitle": "When a dream comes true, a life full of furry love begins.",
+    "ourStory": "OUR STORY",
+    "description": "We are passionate breeders who believe in the importance of ethical breeding and early socialization. Each puppy is raised with love and attention to ensure the best possible start in life.",
+    "delivery": {
+      "title": "Puppy Delivery",
+      "description": "We deliver our puppies between 65-70 days with everything needed for a smooth transition to their new home."
+    }
+  },
+  "dogs": {
+    "title": "Our Dogs",
+    "subtitle": "Gallery of our Australian Labradoodle",
+    "viewMore": "See more photos"
+  },
+  "breed": {
+    "title": "The Breed: Australian Labradoodle",
+    "subtitle": "The Labradoodle is a breed that originated in Australia in the 1980s.",
+    "description": "The Labradoodle was created to produce a healthy, intelligent, and sociable dog with hypoallergenic and low-shedding coat, ideal for family life and therapeutic work.",
+    "features": {
+      "color": "Color: red",
+      "coat": "Coat: Fleece",
+      "size": "Size: Medium",
+      "lifespan": "Lifespan 12–15 years"
+    }
   }
 }

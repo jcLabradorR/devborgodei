@@ -10,54 +10,40 @@
   },
   "hero": {
     "title": "Australian Labradoodle in Italia",
-    "subtitle": "Allevamento etico, socializzazione precoce e supporto completo per integrare un Doodle equilibrato nella tua famiglia.",
+    "subtitle": "E una razza consolidata con più generazione, è un Pedigree accurato, non un semplice incrocio tra un Labrador e un Barboncino di prima generazione (F1).",
     "buttons": {
       "seeLitters": "Vedi cucciolate",
       "knowBreed": "Conosci la razza"
     }
   },
   "soDoodle": {
-    "title": "Trovare il senso: quando l'amore diventa missione",
-    "subtitle": "Oltre 10 anni di allevamento etico, dando priorità al benessere emotivo e fisico di ogni cucciolo e della sua famiglia.",
-    "aboutMe": {
-      "title": "Su di me",
-      "description": "Sono allevatrice e facilitatrice di interventi assistiti con animali. Seleziono famiglie impegnate e accompagno durante i primi 65 giorni con educazione, socializzazione e guida.",
-      "bulletPoints": [
-        "Allevamento in casa con stimolazione neurologica precoce",
-        "Piano vaccinale aggiornato e sverminazione",
-        "Kit di adozione completo e follow-up"
-      ]
-    },
+    "title": "Lola ci ha portato più che tenerezza: ci ha regalato la passione per questa razza.",
+    "subtitle": "Quando un sogno diventa realtà, inizia una vita piena di amore peloso.",
+    "ourStory": "LA NOSTRA STORIA",
+    "description": "Siamo allevatori appassionati che credono nell'importanza dell'allevamento etico e nella socializzazione precoce. Ogni cucciolo viene cresciuto con amore e attenzione per garantire il miglior inizio di vita possibile.",
     "delivery": {
-      "title": "Consegna del cucciolo",
-      "description": "Consegniamo tra i 65/70 giorni con tutto il necessario per un'integrazione serena. Offriamo anche raccomandazioni per l'educazione, la toelettatura e la veterinaria.",
-      "button": "Verifica disponibilità"
+      "title": "Consegna del Cucciolo",
+      "description": "Consegniamo i nostri cuccioli tra i 65-70 giorni con tutto il necessario per una transizione serena nella loro nuova casa."
     }
   },
   "dogs": {
     "title": "I Nostri Cani",
-    "subtitle": "Esempi di taglie e mantelli",
-    "size": {
-      "mini": "Mini",
-      "medium": "Medio",
-      "standard": "Standard"
-    },
-    "color": "Colore"
+    "subtitle": "Galleria dei nostri Australian Labradoodle"
   },
   "breed": {
     "title": "La Razza: Australian Labradoodle",
-    "subtitle": "Cani da famiglia e da terapia: intelligenza, stabilità emotiva e convivenza amichevole.",
-    "description": "Gli Australian Labradoodle si caratterizzano per il loro temperamento equilibrato, alta socievolezza e facilità di apprendimento. Solitamente hanno una bassa perdita di pelo e sono adatti a famiglie attive.",
-    "features": [
-      "Ipoallergenici (in molti casi)",
-      "Altamente addestrabili",
-      "Ideali per terapia/assistenza",
-      "Aspettativa di vita 12-15 anni"
-    ]
+    "subtitle": "Il Labradoodle è una razza che ha avuto origine in Australia negli anni 80'.",
+    "description": "Il Labradoodle è stato creato per produrre un cane sano, intelligente e socievole con un pelo anallergico e che perde poco pelo, ideale per la vita in famiglia e per il lavoro terapeutico.",
+    "features": {
+      "color": "Colore: rosso",
+      "coat": "Cappotto: Pile",
+      "size": "Taglia: Media",
+      "lifespan": "Aspettativa di vita 12–15 anni"
+    }
   },
   "faq": {
     "title": "Domande Frequenti",
-    "subtitle": "Tutto l'essenziale prima dell'adozione",
+    "subtitle": "Tutto quello che devi sapere prima dell'adozione",
     "questions": [
       {
         "q": "Che cos'è un Australian Labradoodle?",
