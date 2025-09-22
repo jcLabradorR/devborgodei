@@ -344,7 +344,7 @@ export default function SodoodleStyleSite() {
   />
   <div className="max-w-3xl mx-auto">
     <Accordion type="single" collapsible className="w-full">
-      {(t('faq.questions', { returnObjects: true }) as { q: string; a: string }[]).map((faq, i) => (
+      {faqs.map((faq, i) => (
         <AccordionItem key={i} value={`item-${i}`}>
           <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
           <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
