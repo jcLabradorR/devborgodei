@@ -9,10 +9,10 @@
     "wantPuppy": "Voglio un Cucciolo"
   },
   "hero": {
-    "title": "Australian Labradoodle in Italia",
-    "subtitle": "E una razza consolidata con più generazione, è un Pedigree accurato, non un semplice incrocio tra un Labrador e un Barboncino di prima generazione (F1).",
+    "title": "AUSTRALIAN LABRADOODLE IN ITALIA",
+    "subtitle": "Lola ci ha portato più che tenerezza; Quando un sogno diventa realtà inizia una vita piena di amore peloso!",
     "buttons": {
-      "seeLitters": "Vedi cucciolate",
+      "seeLitters": "Galleria",
       "knowBreed": "Conosci la razza"
     }
   },
@@ -20,10 +20,12 @@
     "title": "Lola ci ha portato più che tenerezza: ci ha regalato la passione per questa razza.",
     "subtitle": "Quando un sogno diventa realtà, inizia una vita piena di amore peloso.",
     "ourStory": "LA NOSTRA STORIA",
-    "description": "Siamo allevatori appassionati che credono nell'importanza dell'allevamento etico e nella socializzazione precoce. Ogni cucciolo viene cresciuto con amore e attenzione per garantire il miglior inizio di vita possibile.",
+    "description": "Tutto è cominciato con un desiderio di compleanno di mia figlia Ornella, quando Lola è arrivata nella nostra piccola famiglia, quel piccolo batuffolo di peli, ci siamo innamorate, e con lei arrivo l’amore per questa bellissima razza.",
+    "description2": "Lola è senza altro speciale, di una tenerezza unica, che  ha dato tanto amore e tanta gioia alla nostra vita in una maniera che non potevamo minimamente immaginare.",
     "delivery": {
-      "title": "Consegna del Cucciolo",
-      "description": "Consegniamo i nostri cuccioli tra i 65-70 giorni con tutto il necessario per una transizione serena nella loro nuova casa."
+      "title": "Cuccioli",
+      "description": "Ogni cucciolata è pensata e realizzata con una selezione accurata dei genitori, valutando tanto le caratteristiche caratteriale come di bellezza. Lavoriamo solo con cani provenienti da linee di sangue autentiche. I cuccioli nascono nella nostra casa, niente gabbie, tante coccole attenzione e cura.",
+      "description2": "I cuccioli lasciano il nido tra le 8 e 10 settimane, pero tranquilli a questo punto sarete già pronti, pieni di consigli informazioni e soprattutto avendo la certezza di poter contattarci!! Non che di una immensa  gioia per cominciare questa nuova avventura piena di amore insieme a un Labradoodle."
     }
   },
   "dogs": {
@@ -31,31 +33,38 @@
     "subtitle": "Galleria dei nostri Australian Labradoodle"
   },
   "breed": {
-    "title": "La Razza: Australian Labradoodle",
+    "title": "La Razza: Australian Labradoodle ",
     "subtitle": "Il Labradoodle è una razza che ha avuto origine in Australia negli anni 80'.",
-    "description": "Il Labradoodle è stato creato per produrre un cane sano, intelligente e socievole con un pelo anallergico e che perde poco pelo, ideale per la vita in famiglia e per il lavoro terapeutico.",
+    "description": "E una razza consolidata con più generazione, è un Pedigree accurato, non un semplice incrocio tra un Labrador e un Barboncino di prima generazione (F1). E stato creato per produrre un cane sano, intelligente e socievole che non perde pelo e non emana odore di cane, ideale per la vita in famiglia e per il lavoro terapeutico.",
+    "description2": "Con un carattere bellissimo, sensibile molto adatti a i bambini e non solo perché con un solo sguardo riesce a scioglierti il cuore. Un amico per una vita che ti sorprenderà ogni giorno con la sua tenerezza e dolcezza.",
     "features": {
+      "natale": "Natale: 26 aprile Spagna",
       "color": "Colore: rosso",
-      "coat": "Cappotto: Pile",
-      "size": "Taglia: Media",
-      "lifespan": "Aspettativa di vita 12–15 anni"
+      "coat": "pelliccia: bellissimo mantello di pile",
+      "size": "Taglia: Media 49 cm",
+      "weight": "Peso: 14 kg",
+      "lifespan": "Aspettativa di vita 12-15 anni"
     }
   },
   "faq": {
     "title": "Domande Frequenti",
-    "subtitle": "Tutto quello che devi sapere prima dell'adozione",
+    "subtitle": "Tutto quello che devi sapere su Lola",
     "questions": [
       {
         "q": "Che cos'è un Australian Labradoodle?",
         "a": "È una razza sviluppata per la compagnia e la terapia, riconosciuta per il suo temperamento stabile, l'intelligenza e il pelo ipoallergenico in molti casi."
       },
       {
-        "q": "Quando vengono consegnati i cuccioli?",
-        "a": "Generalmente tra i 65 e 70 giorni, con sverminazione e piano vaccinale aggiornato, oltre a un kit di benvenuto."
+        "q": "dove è nata Lola e quali sono le sue caratteristiche?",
+        "a": "Lola è nata il 26 aprile a Barcellona, ​​in Spagna, è di colore rosso, di taglia media (49 cm e 14 kg) con un mantello di pelo molto bello e morbido."
       },
       {
-        "q": "Offrite supporto post-adozione?",
-        "a": "Sì, forniamo guida nelle prime fasi di adattamento e raccomandazioni per l'educazione, la toelettatura e i veterinari."
+        "q": "Come è la personalità di Lola?",
+        "a": "Ha un carattere molto dolce che ti fa sentire a tuo agio con la sua unica protezione, è anche molto vivace e divertente con un'intelligenza comunicativa incredibile."
+      },
+      {
+        "q": "Cosa le piace a Lola?",
+        "a": "Ama le coccole ed specialmente abbracciare la mia gamba per farmi capire quando è emozionata e anche qualche volta per cercare sicurezza, Lola è davvero  una cagnolina speciale."
       }
     ]
   },
@@ -63,6 +72,7 @@
     "title": "Contatto",
     "subtitle": "Programma una chiamata o scrivici sui social",
     "form": {
+      "title": "Escrivici",
       "name": "Nome",
       "email": "Email",
       "phone": "Telefono",
@@ -71,7 +81,7 @@
     }
   },
   "footer": {
-    "rights": "© 2024 di Borgo dei Doodle. Tutti i diritti riservati.",
+    "rights": "© 2025 di Borgo dei Doodle. Tutti i diritti riservati.",
     "links": {
       "about": "So Doodle",
       "faq": "FAQ",

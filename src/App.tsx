@@ -45,7 +45,7 @@ const LanguageSelector: React.FC = () => {
 const galleryImages = [
   {
     id: 1,
-    src: "/images/foto1.jpg",
+    src: "/images/foto13.jpg",
     alt: "Australian Labradoodle jugando en el jardín"
   },
   {
@@ -95,12 +95,12 @@ const galleryImages = [
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=800",
+    src: "/images/foto9.jpg",
     alt: "Labradoodle con juguete"
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=800",
+    src: "/images/foto13.jpg",
     alt: "Labradoodle posando para la cámara"
   },
 ];
@@ -170,7 +170,7 @@ export default function SodoodleStyleSite() {
     alt="So Doodle Logo"
     className="h-16 w-16 md:h-20 md:w-20"
   />
-  <span className="font-bold text-sm sm:text-base md:text-xl"> {/* Modificado aquí */}
+  <span className="font-bold text-sm sm:text-base md:text-xl"> 
     Borgo dei Doodle
   </span>
 </a>
@@ -255,6 +255,9 @@ export default function SodoodleStyleSite() {
         <p className="text-muted-foreground">
           {t('soDoodle.description')}
         </p>
+        <p className="text-muted-foreground">
+          {t('soDoodle.description2')}
+        </p>
       </CardContent>
     </Card>
     
@@ -263,6 +266,9 @@ export default function SodoodleStyleSite() {
         <h3 className="text-xl font-semibold">{t('soDoodle.delivery.title')}</h3>
         <p className="text-muted-foreground">
           {t('soDoodle.delivery.description')}
+        </p>
+        <p className="text-muted-foreground">
+          {t('soDoodle.delivery.description2')}
         </p>
       </CardContent>
     </Card>
@@ -311,7 +317,13 @@ export default function SodoodleStyleSite() {
       <p className="text-muted-foreground">
         {t('breed.description')}
       </p>
+      <p className="text-muted-foreground">
+        {t('breed.description2')}
+      </p>
       <ul className="grid sm:grid-cols-2 gap-2 text-sm">
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.natale')}
+        </li>
         <li className="p-3 rounded-xl bg-background border">
           {t('breed.features.color')}
         </li>
@@ -320,6 +332,9 @@ export default function SodoodleStyleSite() {
         </li>
         <li className="p-3 rounded-xl bg-background border">
           {t('breed.features.size')}
+        </li>
+        <li className="p-3 rounded-xl bg-background border">
+          {t('breed.features.weight')}
         </li>
         <li className="p-3 rounded-xl bg-background border">
           {t('breed.features.lifespan')}
@@ -336,7 +351,7 @@ export default function SodoodleStyleSite() {
   </div>
 </section>
 
-   {/* FAQ */}
+{/* FAQ */}
 <section id="faq" className="px-4 py-20">
   <SectionTitle 
     title={t('faq.title')} 
@@ -344,7 +359,7 @@ export default function SodoodleStyleSite() {
   />
   <div className="max-w-3xl mx-auto">
     <Accordion type="single" collapsible className="w-full">
-      {faqs.map((faq, i) => (
+      {t('faq.questions', { returnObjects: true }).map((faq: { q: string; a: string }, i: number) => (
         <AccordionItem key={i} value={`item-${i}`}>
           <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
           <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
@@ -354,46 +369,74 @@ export default function SodoodleStyleSite() {
   </div>
 </section>
 
-      {/* Contacto */}
-      <section id="contacto" className="px-4 py-20 bg-muted/30">
-        <SectionTitle title="Contacto" subtitle="Agenda una llamada o escríbenos por redes" />
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-          <Card className="rounded-2xl">
-            <CardContent className="p-6 space-y-4">
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hola@borgodidoogle.com</span></div>
-              <div className="flex items-center gap-2"><Phone className="h-4 w-4" /><span>+34000000000</span></div>
-              <div className="flex items-center gap-3 mt-2">
-                <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent"><Instagram className="h-4 w-4"/>Instagram</a>
-                <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent"><Facebook className="h-4 w-4"/>Facebook</a>
-              </div>
-            </CardContent>
-          </Card>
-          <Card className="rounded-2xl">
-            <CardContent className="p-6 space-y-4">
-              <h3 className="text-lg font-semibold">Escríbenos</h3>
-              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                <Input placeholder="Nombre" required />
-                <Input type="email" placeholder="Email" required />
-                <Input placeholder="Teléfono" />
-                <Textarea placeholder="Cuéntanos sobre tu familia y estilo de vida" rows={5} />
-                <Button type="submit" className="rounded-2xl w-full">Enviar consulta</Button>
-              </form>
-            </CardContent>
-          </Card>
+{/* Contacto */}
+<section id="contacto" className="px-4 py-20 bg-muted/30">
+  <SectionTitle 
+    title={t('contact.title')} 
+    subtitle={t('contact.subtitle')} 
+  />
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+    <Card className="rounded-2xl">
+      <CardContent className="p-6 space-y-4">
+        <div className="flex items-center gap-2">
+          <Mail className="h-4 w-4" />
+          <span>hola@borgodidoogle.com</span>
         </div>
-      </section>
+        <div className="flex items-center gap-2">
+          <Phone className="h-4 w-4" />
+          <span>+34000000000</span>
+        </div>
+        <div className="flex items-center gap-3 mt-2">
+          <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent">
+            <Instagram className="h-4 w-4"/>Instagram
+          </a>
+          <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent">
+            <Facebook className="h-4 w-4"/>Facebook
+          </a>
+        </div>
+      </CardContent>
+    </Card>
+    <Card className="rounded-2xl">
+      <CardContent className="p-6 space-y-4">
+        <h3 className="text-lg font-semibold">{t('contact.form.title')}</h3>
+        <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+          <Input 
+            placeholder={t('contact.form.name')} 
+            required 
+          />
+          <Input 
+            type="email" 
+            placeholder={t('contact.form.email')} 
+            required 
+          />
+          <Input 
+            placeholder={t('contact.form.phone')} 
+          />
+          <Textarea 
+            placeholder={t('contact.form.message')} 
+            rows={5} 
+          />
+          <Button type="submit" className="rounded-2xl w-full">
+            {t('contact.form.submit')}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
+  </div>
+</section>
 
       {/* Footer */}
-      <footer className="border-t">
-        <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>© {new Date().getFullYear()} por TuDoodle. Todos los derechos reservados.</div>
-          <div className="flex gap-4">
-            <a href="#so-doodle" className="hover:underline">So Doodle</a>
-            <a href="#faq" className="hover:underline">FAQ</a>
-            <a href="#contacto" className="hover:underline">Contacto</a>
-          </div>
-        </div>
-      </footer>
+     {/* Footer */}
+<footer className="border-t">
+  <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>{t('footer.rights')}</div>
+    <div className="flex gap-4">
+      <a href="#so-doodle" className="hover:underline">{t('footer.links.about')}</a>
+      <a href="#faq" className="hover:underline">{t('footer.links.faq')}</a>
+      <a href="#contacto" className="hover:underline">{t('footer.links.contact')}</a>
+    </div>
+  </div>
+</footer>
 
       {/* Scroll suave */}
       <script dangerouslySetInnerHTML={{
