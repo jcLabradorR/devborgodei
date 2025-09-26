@@ -105,21 +105,6 @@ const galleryImages = [
   },
 ];
 
-const faqs = [
-  {
-    q: "¿Qué es un Australian Labradoodle?",
-    a: "Es una raza desarrollada para compañía y terapia, reconocida por su temperamento estable, inteligencia y pelaje hipoalergénico en muchos casos.",
-  },
-  {
-    q: "¿Cuándo se entregan los cachorros?",
-    a: "Generalmente entre los 65 y 70 días, con desparasitación y plan de vacunación al día, además de un kit de bienvenida.",
-  },
-  {
-    q: "¿Ofrecen acompañamiento post-adopción?",
-    a: "Sí, brindamos guía en las primeras etapas de adaptación y recomendaciones de educación, peluquería y veterinarios.",
-  },
-];
-
 const SectionTitle: React.FC<{ title: string; subtitle?: string; id?: string }> = ({ title, subtitle, id }) => (
   <div id={id} className="max-w-5xl mx-auto text-center mb-10">
     <motion.h2
@@ -157,6 +142,7 @@ const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick?: () 
 
 export default function SodoodleStyleSite() {
   const { t } = useTranslation();
+  const faqKeys = ['what', 'birth', 'personality', 'likes']; // Claves de las preguntas frecuentes
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -353,21 +339,25 @@ export default function SodoodleStyleSite() {
 
 {/* FAQ */}
 <section id="faq" className="px-4 py-20">
-  <SectionTitle 
-    title={t('faq.title')} 
-    subtitle={t('faq.subtitle')} 
-  />
-  <div className="max-w-3xl mx-auto">
-    <Accordion type="single" collapsible className="w-full">
-      {t('faq.questions', { returnObjects: true }).map((faq: { q: string; a: string }, i: number) => (
-        <AccordionItem key={i} value={`item-${i}`}>
-          <AccordionTrigger className="text-left">{faq.q}</AccordionTrigger>
-          <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
-        </AccordionItem>
-      ))}
-    </Accordion>
-  </div>
-</section>
+        <SectionTitle 
+          title={t('faq.title')} 
+          subtitle={t('faq.subtitle')} 
+        />
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="w-full">
+            {faqKeys.map((key, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger className="text-left">
+                  {t(`faq.questions.${key}.q`)}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  {t(`faq.questions.${key}.a`)}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
 {/* Contacto */}
 <section id="contacto" className="px-4 py-20 bg-muted/30">
