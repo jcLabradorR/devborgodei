@@ -9,10 +9,10 @@
     "wantPuppy": "I want a puppy"
   },
   "hero": {
-    "title": "Australian Labradoodles in Chile",
-    "subtitle": "Ethical breeding, early socialization and comprehensive support to integrate a balanced Doodle into your family.",
+    "title": "AUSTRALIAN LABRADOODLE IN ITALY",
+    "subtitle": "Lola brought us more than tenderness; When a dream comes true, a life full of furry love begins!",
     "buttons": {
-      "seeLitters": "See litters",
+      "seeLitters": "Gallery",
       "knowBreed": "Know the breed"
     }
   },
@@ -20,26 +20,72 @@
     "title": "Lola brought us more than tenderness: she gave us passion for this breed.",
     "subtitle": "When a dream comes true, a life full of furry love begins.",
     "ourStory": "OUR STORY",
-    "description": "We are passionate breeders who believe in the importance of ethical breeding and early socialization. Each puppy is raised with love and attention to ensure the best possible start in life.",
+    "description": "It all started with my daughter Ornella's birthday wish, when Lola arrived in our little family, that little ball of fur, we fell in love, and with her came the love for this beautiful breed.",
+    "description2": "Lola is undoubtedly special, with unique tenderness, who has given so much love and joy to our lives in a way we could never have imagined.",
     "delivery": {
-      "title": "Puppy Delivery",
-      "description": "We deliver our puppies between 65-70 days with everything needed for a smooth transition to their new home."
+      "title": "Puppies",
+      "description": "Each litter is thought out and created with careful selection of parents, evaluating both character and beauty characteristics. We only work with dogs from authentic bloodlines. Puppies are born in our home, no cages, lots of cuddles, attention and care.",
+      "description2": "Puppies leave the nest between 8 and 10 weeks, but don't worry, by this point you'll be ready, full of advice, information and above all having the certainty of being able to contact us!! Nothing but immense joy to begin this new adventure full of love together with a Labradoodle."
     }
   },
   "dogs": {
     "title": "Our Dogs",
-    "subtitle": "Gallery of our Australian Labradoodle",
-    "viewMore": "See more photos"
+    "subtitle": "Gallery of our Australian Labradoodles"
   },
   "breed": {
     "title": "The Breed: Australian Labradoodle",
-    "subtitle": "The Labradoodle is a breed that originated in Australia in the 1980s.",
-    "description": "The Labradoodle was created to produce a healthy, intelligent, and sociable dog with hypoallergenic and low-shedding coat, ideal for family life and therapeutic work.",
+    "subtitle": "The Labradoodle is a breed that originated in Australia in the 80's.",
+    "description": "It is a consolidated breed with multiple generations, it is an accurate Pedigree, not a simple cross between a Labrador and a first generation Poodle (F1). It was created to produce a healthy, intelligent and sociable dog that doesn't shed and doesn't emit dog odor, ideal for family life and therapeutic work.",
+    "description2": "With a beautiful character, sensitive, very suitable for children and not only because with just one look it manages to melt your heart. A friend for life who will surprise you every day with his tenderness and sweetness.",
     "features": {
+      "natale": "Birth: April 26 Spain",
       "color": "Color: red",
-      "coat": "Coat: Fleece",
-      "size": "Size: Medium",
-      "lifespan": "Lifespan 12–15 years"
+      "coat": "Fur: beautiful fleece coat",
+      "size": "Size: Medium 49 cm",
+      "weight": "Weight: 14 kg",
+      "lifespan": "Life expectancy 12-15 years"
+    }
+  },
+"faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before adoption",
+    "questions": {
+      "what": {
+        "q": "What is an Australian Labradoodle?",
+        "a": "It is a breed developed for companionship and therapy, recognized for its stable temperament, intelligence and hypoallergenic coat in many cases."
+      },
+      "birth": {
+        "q": "When are puppies delivered?",
+        "a": "Generally between 8 and 10 weeks, with deworming and updated vaccination plan, plus a welcome kit with everything needed for a smooth transition."
+      },
+      "personality": {
+        "q": "What is their personality like?",
+        "a": "They are dogs with a wonderful character, sensitive, very suitable for children. They are intelligent, sociable and with great emotional stability, ideal for family life."
+      },
+      "likes": {
+        "q": "Do you offer post-adoption support?",
+        "a": "Yes, we provide guidance in the early stages of adaptation and recommendations for education, grooming and veterinarians. We maintain contact to ensure the wellbeing of our puppies."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Schedule a call or write to us on social media",
+    "form": {
+      "title": "Write to us",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Tell us about your family and lifestyle",
+      "submit": "Send request"
+    }
+  },
+  "footer": {
+    "rights": "© 2024 by Borgo dei Doodle. All rights reserved.",
+    "links": {
+      "about": "So Doodle",
+      "faq": "FAQ",
+      "contact": "Contact"
     }
   }
 }

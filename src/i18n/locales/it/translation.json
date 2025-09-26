@@ -48,25 +48,25 @@
   },
   "faq": {
     "title": "Domande Frequenti",
-    "subtitle": "Tutto quello che devi sapere su Lola",
-    "questions": [
-      {
+    "subtitle": "Tutto quello che devi sapere prima dell'adozione",
+    "questions": {
+      "what": {
         "q": "Che cos'è un Australian Labradoodle?",
-        "a": "È una razza sviluppata per la compagnia e la terapia, riconosciuta per il suo temperamento stabile, l'intelligenza e il pelo ipoallergenico in molti casi."
+        "a": "È una razza sviluppata per la compagnia e la terapia, riconosciuta per il suo temperamento stabile, intelligenza e mantello ipoallergenico in molti casi."
       },
-      {
-        "q": "dove è nata Lola e quali sono le sue caratteristiche?",
-        "a": "Lola è nata il 26 aprile a Barcellona, ​​in Spagna, è di colore rosso, di taglia media (49 cm e 14 kg) con un mantello di pelo molto bello e morbido."
+      "birth": {
+        "q": "Quando vengono consegnati i cuccioli?",
+        "a": "Generalmente tra le 8 e le 10 settimane, con sverminazione e piano di vaccinazione aggiornato, più un kit di benvenuto con tutto il necessario per una transizione senza problemi."
       },
-      {
-        "q": "Come è la personalità di Lola?",
-        "a": "Ha un carattere molto dolce che ti fa sentire a tuo agio con la sua unica protezione, è anche molto vivace e divertente con un'intelligenza comunicativa incredibile."
+      "personality": {
+        "q": "Com'è il loro carattere?",
+        "a": "Sono noti per essere amichevoli, affettuosi e intelligenti. Si adattano bene alle famiglie e sono ottimi con i bambini."
       },
-      {
-        "q": "Cosa le piace a Lola?",
-        "a": "Ama le coccole ed specialmente abbracciare la mia gamba per farmi capire quando è emozionata e anche qualche volta per cercare sicurezza, Lola è davvero  una cagnolina speciale."
+      "likes": {
+        "q": "Di cosa hanno bisogno?",
+        "a": "Hanno bisogno di esercizio regolare, stimolazione mentale e toelettatura per mantenere il loro mantello in buone condizioni."
       }
-    ]
+    }
   },
   "contact": {
     "title": "Contatto",
