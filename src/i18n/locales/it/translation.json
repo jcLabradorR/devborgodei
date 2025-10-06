@@ -2,15 +2,22 @@
   "nav": {
     "home": "Home",
     "about": "So Doodle",
-    "dogs": "I Nostri Cani",
+    "nostri": "I Nostri Cani",
+    "galleria": "Galleria",
     "breed": "La Razza",
     "faq": "FAQ",
     "contact": "Contatto",
     "wantPuppy": "Voglio un Cucciolo"
   },
+  "iNostriCani": {
+    "title": "I NOSTRI CANI",
+    "subtitle": "DoodleBabys / Lola WALA-00081323",
+    "description": "Lola è nata il 26 aprile in Barcellona Spagna, è colore rosso, misura media (49 cm e 14 kg) con un bellissimo e morbido mantello di pile .. ha un carattere dolcissimo che ti scioglie con il suo sguardo unico pieno di tenerezza, è anche molto vivace e divertita di una intelligenza per comunicare incredibile.",
+    "description2": "Ama le coccole ed specialmente abbracciare la mia gamba per farmi capire quando è emozionata e anche qualche volta per cercare sicurezza, Lola è davvero una cagnolina speciale."
+  },
   "hero": {
     "title": "AUSTRALIAN LABRADOODLE IN ITALIA",
-    "subtitle": "Lola ci ha portato più che tenerezza; Quando un sogno diventa realtà inizia una vita piena di amore peloso!",
+    "subtitle": "Quando un sogno diventa realtà inizia una vita piena di amore peloso!",
     "buttons": {
       "seeLitters": "Galleria",
       "knowBreed": "Conosci la razza"
@@ -20,22 +27,22 @@
     "title": "Lola ci ha portato più che tenerezza: ci ha regalato la passione per questa razza.",
     "subtitle": "Quando un sogno diventa realtà, inizia una vita piena di amore peloso.",
     "ourStory": "LA NOSTRA STORIA",
-    "description": "Tutto è cominciato con un desiderio di compleanno di mia figlia Ornella, quando Lola è arrivata nella nostra piccola famiglia, quel piccolo batuffolo di peli, ci siamo innamorate, e con lei arrivo l’amore per questa bellissima razza.",
+    "description": "Tutto è cominciato con un desiderio di compleanno di mia figlia Ornella, quando Lola è arrivata nella nostra piccola famiglia, quel piccolo batuffolo di peli, ci siamo innamorate, e con lei arrivò l’amore per questa bellissima razza.",
     "description2": "Lola è senza altro speciale, di una tenerezza unica, che  ha dato tanto amore e tanta gioia alla nostra vita in una maniera che non potevamo minimamente immaginare.",
     "delivery": {
-      "title": "Cuccioli",
-      "description": "Ogni cucciolata è pensata e realizzata con una selezione accurata dei genitori, valutando tanto le caratteristiche caratteriale come di bellezza. Lavoriamo solo con cani provenienti da linee di sangue autentiche. I cuccioli nascono nella nostra casa, niente gabbie, tante coccole attenzione e cura.",
+      "title": "CUCCIOLI",
+      "description": "Ogni cucciolata è pensata e realizzata con una selezione accurata dei genitori, valutando tanto le caratteristiche caratteriali come di bellezza. Lavoriamo solo con cani provenienti da linee di sangue autentiche. I cuccioli nascono nella nostra casa, niente gabbie, tante coccole, attenzioni e cura.",
       "description2": "I cuccioli lasciano il nido tra le 8 e 10 settimane, pero tranquilli a questo punto sarete già pronti, pieni di consigli informazioni e soprattutto avendo la certezza di poter contattarci!! Non che di una immensa  gioia per cominciare questa nuova avventura piena di amore insieme a un Labradoodle."
     }
   },
   "dogs": {
-    "title": "I Nostri Cani",
+    "title": "Galleria",
     "subtitle": "Galleria dei nostri Australian Labradoodle"
   },
   "breed": {
     "title": "La Razza: Australian Labradoodle ",
     "subtitle": "Il Labradoodle è una razza che ha avuto origine in Australia negli anni 80'.",
-    "description": "E una razza consolidata con più generazione, è un Pedigree accurato, non un semplice incrocio tra un Labrador e un Barboncino di prima generazione (F1). E stato creato per produrre un cane sano, intelligente e socievole che non perde pelo e non emana odore di cane, ideale per la vita in famiglia e per il lavoro terapeutico.",
+    "description": "È una razza consolidata con più generazioni, è un Pedigree accurato, non un semplice incrocio tra un Labrador e un Barboncino di prima generazione (F1). E stato creato per produrre un cane sano, intelligente e socievole che non perde pelo e non emana odore di cane, ideale per la vita in famiglia e per il lavoro terapeutico.",
     "description2": "Con un carattere bellissimo, sensibile molto adatti a i bambini e non solo perché con un solo sguardo riesce a scioglierti il cuore. Un amico per una vita che ti sorprenderà ogni giorno con la sua tenerezza e dolcezza.",
     "features": {
       "natale": "Natale: 26 aprile Spagna",
@@ -84,7 +91,7 @@
     "rights": "© 2025 di Borgo dei Doodle. Tutti i diritti riservati.",
     "links": {
       "about": "So Doodle",
-      "faq": "FAQ",
+      "faq": "I Nostri Cani",
       "contact": "Contatto"
     }
   }

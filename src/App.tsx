@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Mail, Phone, Instagram, Facebook } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import './i18n/config';
 import { GB, IT } from 'country-flag-icons/react/3x2'
@@ -100,12 +99,17 @@ const galleryImages = [
   },
   {
     id: 12,
-    src: "/images/foto13.jpg",
+    src: "/images/foto134.jpg",
     alt: "Labradoodle posando para la cámara"
   },
 ];
 
-const SectionTitle: React.FC<{ title: string; subtitle?: string; id?: string }> = ({ title, subtitle, id }) => (
+const SectionTitle: React.FC<{ 
+  title: string; 
+  subtitle?: string; 
+  id?: string;
+  subtitleSize?: 'default' | 'large';
+}> = ({ title, subtitle, id, subtitleSize = 'default' }) => (
   <div id={id} className="max-w-5xl mx-auto text-center mb-10">
     <motion.h2
       initial={{ opacity: 0, y: 10 }}
@@ -122,7 +126,11 @@ const SectionTitle: React.FC<{ title: string; subtitle?: string; id?: string }> 
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="text-muted-foreground mt-2"
+        className={`text-muted-foreground mt-2 ${
+          subtitleSize === 'large' 
+            ? 'text-base md:text-lg lg:text-xl leading-relaxed' // Cambiado aquí
+            : 'text-sm md:text-base' // Y aquí también para consistencia
+        }`}
       >
         {subtitle}
       </motion.p>
@@ -142,7 +150,6 @@ const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick?: () 
 
 export default function SodoodleStyleSite() {
   const { t } = useTranslation();
-  const faqKeys = ['what', 'birth', 'personality', 'likes']; // Claves de las preguntas frecuentes
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -154,7 +161,7 @@ export default function SodoodleStyleSite() {
   <img 
     src="/images/logo.png"
     alt="So Doodle Logo"
-    className="h-16 w-16 md:h-20 md:w-20"
+    className="h-18 w-18 md:h-28 md:w-28" // Cambiado de h-16 w-16 md:h-20 md:w-20
   />
   <span className="font-bold text-sm sm:text-base md:text-xl"> 
     Borgo dei Doodle
@@ -165,9 +172,9 @@ export default function SodoodleStyleSite() {
     <nav className="hidden md:flex items-center text-sm">
       <NavLink href="#inicio">{t('nav.home')}</NavLink>
       <NavLink href="#so-doodle">{t('nav.about')}</NavLink>
-      <NavLink href="#nuestros-perros">{t('nav.dogs')}</NavLink>
+      <NavLink href="#i-nostri-cani">{t('nav.nostri')}</NavLink>
+      <NavLink href="#galleria">{t('nav.galleria')}</NavLink>
       <NavLink href="#la-raza">{t('nav.breed')}</NavLink>
-      <NavLink href="#faq">{t('nav.faq')}</NavLink>
       <NavLink href="#contacto">{t('nav.contact')}</NavLink>
     </nav>
 
@@ -201,7 +208,7 @@ export default function SodoodleStyleSite() {
       </p>
       <div className="mt-6 flex gap-3">
         <Button asChild className="rounded-2xl">
-          <a href="#nuestros-perros">
+          <a href="#galleria">
             {t('hero.buttons.seeLitters')}
           </a>
         </Button>
@@ -232,7 +239,7 @@ export default function SodoodleStyleSite() {
 <section id="so-doodle" className="px-4 py-20 bg-muted/30">
   <SectionTitle
     title={t('soDoodle.title')}
-    subtitle={t('soDoodle.subtitle')}
+    /*subtitle={t('soDoodle.subtitle')}*/
   />
   <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
     <Card className="rounded-2xl shadow-sm">
@@ -261,10 +268,39 @@ export default function SodoodleStyleSite() {
   </div>
 </section>
 
-<section id="nuestros-perros" className="px-4 py-20">
+{/* Nueva sección con diseño invertido */}
+<section id="i-nostri-cani" className="px-4 py-20">
+  <SectionTitle
+    title={t('iNostriCani.title')}
+    subtitle={t('iNostriCani.subtitle')}
+    subtitleSize="large"
+  />
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
+    {/* Imagen a la izquierda */}
+    <div className="relative h-[320px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden shadow-lg order-2 md:order-1">
+      <img
+        src="/images/foto134.jpg"
+        alt="Australian Labradoodle en familia"
+        className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+      />
+    </div>
+    
+    {/* Texto a la derecha */}
+    <div className="space-y-4 order-1 md:order-2">
+      <p className="text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
+        {t('iNostriCani.description')}
+      </p>
+      <p className="text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
+        {t('iNostriCani.description2')}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="galleria" className="px-4 py-20 bg-muted/30">
   <SectionTitle 
     title={t('dogs.title')} 
-    subtitle={t('dogs.subtitle')} 
+    /*subtitle={t('dogs.subtitle')} */
   />
   
   <div className="max-w-7xl mx-auto">
@@ -293,39 +329,20 @@ export default function SodoodleStyleSite() {
 </section>
 
 {/* La Raza */}
-<section id="la-raza" className="px-4 py-20 bg-muted/30">
+<section id="la-raza" className="px-4 py-20">
   <SectionTitle
     title={t('breed.title')}
     subtitle={t('breed.subtitle')}
+    subtitleSize="large" // Añadida esta prop
   />
   <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-center">
-    <div className="space-y-3">
-      <p className="text-muted-foreground">
+    <div className="space-y-4">
+      <p className="text-muted-foreground text-lg leading-relaxed">
         {t('breed.description')}
       </p>
-      <p className="text-muted-foreground">
+      <p className="text-muted-foreground text-lg leading-relaxed">
         {t('breed.description2')}
       </p>
-      <ul className="grid sm:grid-cols-2 gap-2 text-sm">
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.natale')}
-        </li>
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.color')}
-        </li>
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.coat')}
-        </li>
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.size')}
-        </li>
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.weight')}
-        </li>
-        <li className="p-3 rounded-xl bg-background border">
-          {t('breed.features.lifespan')}
-        </li>
-      </ul>
     </div>
     <div className="relative h-[320px] md:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden shadow-lg">
       <img
@@ -336,28 +353,6 @@ export default function SodoodleStyleSite() {
     </div>
   </div>
 </section>
-
-{/* FAQ */}
-<section id="faq" className="px-4 py-20">
-        <SectionTitle 
-          title={t('faq.title')} 
-          subtitle={t('faq.subtitle')} 
-        />
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqKeys.map((key, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left">
-                  {t(`faq.questions.${key}.q`)}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {t(`faq.questions.${key}.a`)}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
 
 {/* Contacto */}
 <section id="contacto" className="px-4 py-20 bg-muted/30">
@@ -372,16 +367,9 @@ export default function SodoodleStyleSite() {
           <Mail className="h-4 w-4" />
           <span>hola@borgodidoogle.com</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Phone className="h-4 w-4" />
-          <span>+34000000000</span>
-        </div>
         <div className="flex items-center gap-3 mt-2">
           <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent">
             <Instagram className="h-4 w-4"/>Instagram
-          </a>
-          <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent">
-            <Facebook className="h-4 w-4"/>Facebook
           </a>
         </div>
       </CardContent>
@@ -422,7 +410,7 @@ export default function SodoodleStyleSite() {
     <div>{t('footer.rights')}</div>
     <div className="flex gap-4">
       <a href="#so-doodle" className="hover:underline">{t('footer.links.about')}</a>
-      <a href="#faq" className="hover:underline">{t('footer.links.faq')}</a>
+      <a href="#i-nostri-cani" className="hover:underline">{t('footer.links.faq')}</a>
       <a href="#contacto" className="hover:underline">{t('footer.links.contact')}</a>
     </div>
   </div>
