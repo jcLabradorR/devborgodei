@@ -44,22 +44,22 @@ const LanguageSelector: React.FC = () => {
 const galleryImages = [
   {
     id: 1,
-    src: "/images/foto13.jpg",
-    alt: "Australian Labradoodle jugando en el jardín"
+    src: "/images/foto134.jpg",
+    alt: "lola"
   },
   {
     id: 2,
-    src: "/images/foto2.jpg",
+    src: "/images/foto26.jpg",
     alt: "Cachorro Labradoodle chocolate"
   },
   {
     id: 3,
-    src: "/images/foto3.jpg",
+    src: "/images/foto21.jpg",
     alt: "Labradoodle adulto color crema"
   },
   {
     id: 4,
-    src: "/images/foto9.jpg",
+    src: "/images/foto3.jpg",
     alt: "Familia de Labradoodles"
   },
   {
@@ -69,37 +69,37 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: "/images/foto6.jpg",
+    src: "/images/foto23.jpg",
     alt: "Cachorro Labradoodle durmiendo"
   },
   {
     id: 7,
-    src: "/images/foto9.jpg",
+    src: "/images/foto22.jpg",
     alt: "Labradoodle en sesión de entrenamiento"
   },
   {
     id: 8,
-    src: "/images/foto12.jpg",
+    src: "/images/foto9.jpg",
     alt: "Labradoodle con pelaje rizado"
   },
   {
     id: 9,
-    src: "/images/foto12.jpg",
+    src: "/images/foto24.jpg",
     alt: "Labradoodle en el parque"
   },
   {
     id: 10,
-    src: "/images/labradoodle-1.jpg",
+    src: "/images/foto12.jpg",
     alt: "Cachorro Labradoodle explorando"
   },
   {
     id: 11,
-    src: "/images/foto9.jpg",
+    src: "/images/foto25.jpg",
     alt: "Labradoodle con juguete"
   },
   {
     id: 12,
-    src: "/images/foto134.jpg",
+    src: "/images/foto13.jpg",
     alt: "Labradoodle posando para la cámara"
   },
 ];
@@ -367,10 +367,18 @@ export default function SodoodleStyleSite() {
           <Mail className="h-4 w-4" />
           <span>hola@borgodidoogle.com</span>
         </div>
+        
         <div className="flex items-center gap-3 mt-2">
           <a href="#" className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border hover:bg-accent">
             <Instagram className="h-4 w-4"/>Instagram
           </a>
+        </div>
+
+        {/* Nuevo div con fondo blanco y texto tipo firma */}
+        <div className="p-4 bg-background rounded-xl">
+          <p className="text-2xl text-foreground font-bold italic" style={{ fontFamily: 'Dancing Script, cursive' }}>
+            Sofia
+          </p>
         </div>
       </CardContent>
     </Card>
